@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聲音後製混音工程 | Jeff Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/my_logo.png" />
+  <style>
+    .article-header {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: var(--dark-green);
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+
+    .back-link:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .article-content {
+      padding: 3rem;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .article-content h3 {
+      color: var(--dark-green);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; 返回首頁 (Back to Home)</a>
+
+    <article class="glass-panel article-content">
+      <div class="card-category">AUDIO ENGINEERING</div>
+      <h1 class="card-title" style="margin-top: 0.5rem; font-size: 2.5rem;">聲音後製混音工程</h1>
+
+      <h3>專案介紹 (Introduction)</h3>
+      <p>這部分主要放上的是和朋友一起製作的cover，基本就是朋友自己玩玩的程度，不過會有這個起頭是因為自己很喜歡做混音這件事！所以如果有想要混音的話也可以聯絡我～</p>
+
+      <h3>使用工具 (Tools Used)</h3>
+      <ul style="padding-left: 20px;">
+        <li>Cubase 13 Pro</li>
+      </ul>
+
+      <h3>使用器材 (Equipment)</h3>
+      <ul style="padding-left: 20px;">
+        <li>Shure Beta58</li>
+        <li>MOTU M4</li>
+        <li>EVO4</li>
+      </ul>
+
+      <h3>1. Covers 混音專案合輯</h3>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLMfWvSiXHSw09PV08rU-XV47XvmzxLIFR"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center; font-size: 0.9rem; margin-top: -1rem; margin-bottom: 2rem;">
+        <a href="https://www.youtube.com/playlist?list=PLMfWvSiXHSw09PV08rU-XV47XvmzxLIFR" target="_blank"
+          style="color: var(--primary);">🎥 如果影片無法在此直接播放，請點擊這裡前往 YouTube 觀看</a>
+      </p>
+
+    </article>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-card glass-panel" style="margin-top: 4rem;">
+        <h3 style="margin-bottom: 0.5rem">Contact Me</h3>
+        <p style="margin-bottom: 1rem; color: var(--text-muted)">Get in touch for collaborations and opportunities.</p>
+        <a href="mailto:haohaoliu0725@gmail.com"
+          style="display:inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 30px; font-weight: bold;">
+          haohaoliu0725@gmail.com
+        </a>
+        <p style="margin-top: 2.5rem; font-size: 0.8rem; color: var(--text-muted); opacity: 0.8; font-weight: 600;">
+          &copy; 2026 Jeff Liu. 網站內所有原創設計與標誌 (LOGO) 皆受版權保護。
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const article = document.querySelector('.article-content');
+      article.style.opacity = '0';
+      article.style.transform = 'translateY(20px)';
+      article.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+
+      requestAnimationFrame(() => {
+        article.style.opacity = '1';
+        article.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+</body>
+
+</html>

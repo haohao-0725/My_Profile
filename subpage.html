@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details | Jeff Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/my_logo.png" />
+  <style>
+    .article-header {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: var(--dark-green);
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+    .back-link:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    .article-content {
+      padding: 3rem;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    .article-content img.feat-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .article-content h3 {
+      color: var(--dark-green);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; 返回首頁 (Back to Home)</a>
+    
+    <article class="glass-panel article-content">
+      <div class="timeline-category" id="article-category">PORTFOLIO DETAIL</div>
+      <h1 class="timeline-title" id="article-title" style="margin-top: 0.5rem; font-size: 2.5rem;">動態影像與混音工程範例頁面</h1>
+      
+      <img src="assets/特殊經歷＿蓮花開專案製作.jpg" alt="Sample Featured Image" class="feat-image" id="article-image">
+      
+      
+      <h3>專案介紹 (Introduction)</h3>
+      <p>這裡是可以讓您撰寫專案細節的地方。您可以放入文字敘述，如果是影片作品也可以使用上面的影片嵌入區塊。如果是靜態相片，可以把上方影片區塊刪除，使用圖片標籤。</p>
+      
+      <h3>我的工作內容 (My Role)</h3>
+      <ul style="padding-left: 20px;">
+        <li>企劃發想與腳本撰寫</li>
+        <li>現場拍攝執行</li>
+        <li>後期剪輯製作</li>
+        <li>聲音設計與混音</li>
+      </ul>
+      
+      <h3>使用工具 (Tools Used)</h3>
+      <p>Adobe Premiere Pro, After Effects, Logic Pro</p>
+
+      <h3>相關連結 (Relevant Links)</h3>
+      <p>
+        <a href="https://youtu.be/ChdDfuRjPjM" target="_blank" style="text-decoration: underline;">沙畫機器人展示影片</a><br>
+        <a href="https://youtube.com/playlist?list=PLBd9stDq-VXFkVkL51lzicIR4EGIWdpJL" target="_blank" style="text-decoration: underline;">臺科50週年校慶限定三部曲</a>
+      </p>
+      <!-- Youtube 影片嵌入範本 (Video Embed Template) -->
+      <div class="video-container" id="video-embed">
+        <iframe src="https://www.youtube.com/embed/ChdDfuRjPjM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center; font-size: 0.9rem; margin-top: -1rem; margin-bottom: 2rem;">
+        <a href="https://youtu.be/ChdDfuRjPjM" target="_blank" style="color: var(--primary);">🎥 如果影片無法在此直接播放，請點擊這裡前往 YouTube 觀看</a>
+      </p>
+      
+    </article>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-card glass-panel" style="margin-top: 4rem;">
+        <h3 style="margin-bottom: 0.5rem">Contact Me</h3>
+        <p style="margin-bottom: 1rem; color: var(--text-muted)">Get in touch for collaborations and opportunities.</p>
+        <a href="mailto:haohaoliu0725@gmail.com" style="display:inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 30px; font-weight: bold;">
+          haohaoliu0725@gmail.com
+        </a>
+        <p style="margin-top: 2.5rem; font-size: 0.8rem; color: var(--text-muted); opacity: 0.8; font-weight: 600;">
+          &copy; 2026 Jeff Liu. 網站內所有原創設計與標誌 (LOGO) 皆受版權保護。
+        </p>
+      </div>
+    </footer>
+  </div>
+  
+  <script>
+    // Optional JS to dynamically update title based on URL 'id'
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      if (id) {
+        document.title = id.toUpperCase() + ' | Jeff Liu';
+        
+        switch (id) {
+          case 'video':
+            document.getElementById('article-title').innerHTML = '動態影像後期製作';
+            break;
+          case 'audio':
+            document.getElementById('article-title').innerHTML = '聲音後製混音工程';
+            break;
+          case 'live':
+            document.getElementById('article-title').innerHTML = '燈光音響工程';
+            break;
+          case 'photo':
+            document.getElementById('article-title').innerHTML = '平面攝影紀錄';
+            document.getElementById('video-embed').style.display = 'none'; // 隱藏影片
+            break;
+          case 'lotus':
+            document.getElementById('article-title').innerHTML = '藝術跨域創作（蓮花開小組）';
+            document.getElementById('article-image').src = 'assets/特殊經歷＿蓮花開專案製作.jpg';
+            break;
+          default:
+            break;
+        }
+      }
+    });
+
+    // Fade-in animation for article content
+    setTimeout(() => {
+        const article = document.querySelector('.article-content');
+        article.style.opacity = '0';
+        article.style.transform = 'translateY(20px)';
+        article.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        
+        requestAnimationFrame(() => {
+            article.style.opacity = '1';
+            article.style.transform = 'translateY(0)';
+        });
+    }, 100);
+  </script>
+</body>
+</html>
