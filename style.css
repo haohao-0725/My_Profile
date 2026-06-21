@@ -248,6 +248,162 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Detail Pages */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-green);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.back-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Photography Page */
+.photography-page {
+  max-width: 920px;
+}
+
+.photography-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 2rem;
+  padding: 3rem;
+  overflow: hidden;
+}
+
+.photo-title {
+  font-size: clamp(2.1rem, 5vw, 4.5rem);
+  margin-bottom: 1rem;
+}
+
+.photo-intro {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 640px;
+}
+
+.instagram-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  background: var(--dark-green);
+  color: white;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 12px 28px rgba(6, 78, 59, 0.22);
+}
+
+.instagram-cta:hover {
+  color: white;
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.album-section {
+  margin-top: 3rem;
+}
+
+.section-heading {
+  margin-bottom: 1.25rem;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+}
+
+.album-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+}
+
+.album-link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.35rem 1.5rem;
+  color: inherit;
+}
+
+.album-link:hover {
+  color: inherit;
+}
+
+.album-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--light-green);
+  color: var(--dark-green);
+  font-weight: 800;
+}
+
+.album-copy {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.album-copy strong {
+  font-size: 1.1rem;
+}
+
+.album-copy small,
+.album-copy span {
+  color: var(--text-muted);
+}
+
+.album-copy span {
+  overflow-wrap: anywhere;
+  font-size: 0.92rem;
+}
+
+.album-arrow {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: transform 0.3s ease;
+}
+
+.album-link:hover .album-arrow {
+  transform: translateX(4px);
+}
+
+.album-empty {
+  color: var(--text-muted);
+  padding: 1rem 0;
+}
+
+.photo-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.photo-reveal.visible {
+  animation: photoReveal 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes photoReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Footer Focus Card */
 footer {
   margin-top: 6rem;
@@ -278,4 +434,29 @@ footer {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .photography-hero {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .instagram-cta {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .album-link {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .album-arrow {
+    display: none;
+  }
 }

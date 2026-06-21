@@ -15,6 +15,7 @@
 
 ## 平面攝影紀錄
 - IG帳號 [IG](https://www.instagram.com/_haohao_2003__/)
+- 公開活動相簿統一整理在網站的「平面攝影紀錄」頁面，連結資料維護於 `data/photo_albums.js`
 
 ## 特殊經歷
 - 參與「藝術跨域創作課程」（蓮花開小組）[相關影片](https://youtu.be/qS2mb7FrwwQ?si=4qhuetaoXmM10zWU)

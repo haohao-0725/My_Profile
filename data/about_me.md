@@ -23,6 +23,7 @@ Shure beta58, MOTU M4, EVO4
 
 ## 平面攝影紀錄
 - IG帳號 [IG](https://www.instagram.com/_haohao_2003__/)
+- 公開活動相簿統一整理在網站的「平面攝影紀錄」頁面，連結資料維護於 `data/photo_albums.js`
 
 ##### 器材
 Sony A6700, 18-135mm F3.5-5.6 OSS
