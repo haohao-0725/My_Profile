@@ -20,6 +20,11 @@ window.PHOTOGRAPHY_DATA = {
       title: "公開相簿 03",
       description: "2026臺科畢業典禮下午場",
       url: "https://photos.app.goo.gl/2nHYEoKputDru1hp7"
+    },
+    {
+      title: "公開相簿 04",
+      description: "2025臺科校園演唱會",
+      url: "https://photos.app.goo.gl/J1AaUsmFn4eYaRLM7"
     }
   ]
 };
